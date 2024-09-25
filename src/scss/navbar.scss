@@ -16,17 +16,15 @@
 
     nav {
         font-family: helvetica-regular;
+        font-size: 1rem;
         margin: 0px;
         display: flex;
         justify-content: space-between;
         align-content: center;
         min-height: 1.5rem;
-        padding: 1rem 0rem 1rem 0rem;
+        padding: 0.5rem 0rem 0.5rem 0rem;
         border-bottom: 1px solid rgb(225,225,225);
-        .link, .logo {
-            color:black;
-            text-decoration: none;
-        }
+       
 
         .active-link, .link:hover {
             font-family: helvetica-bold;
@@ -36,12 +34,10 @@
         }
         
         .navbar-left {    
-            margin: 0px;
             display: flex;
             justify-content: left;
             align-items: center;
             gap: 1.5rem;
-            font-size: 1rem;
             padding-left: 1rem;
         }
         
@@ -51,12 +47,21 @@
             justify-content: right;
             align-items: center;
             gap: 1.5rem;
-            font-size: 1rem;
             padding-right: 1rem;
         }
 
     }
-    
+     
+    .link, .logo {
+        color:black;
+        text-decoration: none;
+        a {
+            color: black;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
     .icon {
         font-size: 1rem;
         color: black;

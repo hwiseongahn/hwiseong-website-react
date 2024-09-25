@@ -45,19 +45,28 @@ const NavbarDesktop = () => {
     return (
         <nav className="navbar">
                 <div className="navbar-left">
-                    <Link className="logo" to="/">MY NAME</Link>
+                    <Link className="logo" to="/">HWISEONG AHN</Link>
                     <CustomLink to="/About">ABOUT</CustomLink>
                     <CustomLink to="/Projects">PROJECTS</CustomLink>
                 </div>
                 <div className="navbar-right">
-                    <motion.a className="link" href="https://www.linkedin.com/in/hwiseongahn/">
+                    <CustomLink to="https://www.linkedin.com/in/hwiseongahn/">
                         LINKED
-                        <FontAwesomeIcon className="icon" icon={faLinkedin} />
-                    </motion.a>
-                    <motion.a className="link" href="https://github.com/hwiseongahn">
-                        GITHUB
-                        <FontAwesomeIcon className="icon" icon={faSquareGithub} />
-                    </motion.a>
+                        <motion.div
+                            animate={{
+                                scale: [1, 2, 2, 1, 1],
+                                rotate: [0, 0, 270, 270, 0],
+                                borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+                              }}>
+                                <FontAwesomeIcon className="icon" icon={faLinkedin} />
+                        </motion.div>
+                    </CustomLink>
+                    <p className="link">
+                        <a href="https://www.linkedin.com/in/hwiseongahn/">
+                            LINKED
+                            
+                        </a>
+                    </p>
                 </div>
         </nav>
     );
