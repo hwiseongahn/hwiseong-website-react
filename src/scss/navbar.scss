@@ -1,0 +1,19 @@
+@media only screen and (min-width: 650px) {
+
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+        .navbar-left {
+            display: flex;
+            justify-content: left;
+        }
+    }
+
+    .link {
+        font-size: 1rem;
+    }
+    .icon {
+        font-size: 5rem;
+    }
+    
+}

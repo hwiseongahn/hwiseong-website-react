@@ -1,14 +1,30 @@
 import React from "react";
 import Navbar from "./Components/Navbar";
-function App() {
-  return (
-    <div className="App">
+import { Route, Routes } from "react-router-dom";
 
-      <>
-      
-      </>
-      <h1>Yo</h1>
-    </div>
+function Home() {
+        return (
+            <>
+                <div className="Hero">
+                    <h1>HI</h1>
+                </div>
+            </>
+        );
+        
+}
+
+function App() {
+    return (
+        <>
+
+                <Navbar/>
+                <div className="container">
+                <Routes>
+                    <Route path= "/" element={<Home/>}/>
+                </Routes>
+                </div>
+
+        </>
   );
 }
 
