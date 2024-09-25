@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Components/Navbar";
 import About from "./Components/About";
 import Projects from "./Components/Projects";
+import Hero from "./Components/Hero";
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 
@@ -9,8 +10,7 @@ function Home() {
         return (
             <>
                 <div className="Hero">
-                    <h1>HI</h1>
-                    <h2>is this the body</h2>
+                    <Hero/>
                 </div>
             </>
         );

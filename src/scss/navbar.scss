@@ -21,9 +21,8 @@
         justify-content: space-between;
         align-content: center;
         min-height: 1.5rem;
-        width: 100%;
-        padding: 0.5rem 0rem 1rem 0rem;
-
+        padding: 1rem 0rem 1rem 0rem;
+        border-bottom: 1px solid rgb(225,225,225);
         .link, .logo {
             color:black;
             text-decoration: none;
@@ -33,15 +32,17 @@
             font-family: helvetica-bold;
             color: black;
             text-decoration: underline;
+            padding-bottom: 0.05rem;
         }
         
-        .navbar-left {
-        margin: 0px;
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        gap: 1.5rem;
-        font-size: 1rem;
+        .navbar-left {    
+            margin: 0px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 1.5rem;
+            font-size: 1rem;
+            padding-left: 1rem;
         }
         
         .navbar-right {
@@ -51,6 +52,7 @@
             align-items: center;
             gap: 1.5rem;
             font-size: 1rem;
+            padding-right: 1rem;
         }
 
     }
