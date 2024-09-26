@@ -14,6 +14,10 @@
         margin: 0;
     }
 
+    * {
+        margin: 0;
+    }
+
     nav {
         font-family: helvetica-regular;
         font-size: 1rem;
@@ -30,7 +34,7 @@
             font-family: helvetica-bold;
             color: black;
             text-decoration: underline;
-            padding-bottom: 0.05rem;
+            padding-bottom: 0.1rem;
         }
         
         .navbar-left {    
@@ -55,11 +59,9 @@
     .link, .logo {
         color:black;
         text-decoration: none;
-        a {
-            color: black;
-            display: flex;
-            flex-direction: row;
-        }
+        display: flex;
+        flex-direction: row;
+        gap: 0.05rem;
     }
 
     .icon {

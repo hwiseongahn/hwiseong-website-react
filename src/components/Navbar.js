@@ -8,7 +8,7 @@ import "../scss/navbar.scss";
 const Navbar = () => {
 
     const ScreenWidthCheck = () => {
-        const [isDesktop, setDesktop] = useState(window.innerWidth > 650);
+        const [isDesktop, setDesktop] = useState(window.innerWidth >= 650);
 
         const updateMedia = () => {
             setDesktop(window.innerWidth >= 650);
@@ -29,7 +29,6 @@ const Navbar = () => {
             </>
         );
     };
-
     return <ScreenWidthCheck />;
 };
 
@@ -51,26 +50,74 @@ const NavbarDesktop = () => {
                 </div>
                 <div className="navbar-right">
                     <CustomLink to="https://www.linkedin.com/in/hwiseongahn/">
-                        LINKED
+                        <motion.p
+                            className="linked-text"
+                            variants={slideUpAnimation}
+                            initial="initial"
+                            whileInView="animate"
+                            transition={{
+                                delay:0.5,
+                            }}
+                            viewport={{
+                                once: true,
+                            }}
+                        >
+                            LINKED
+                        </motion.p>
                         <motion.div
-                            animate={{
-                                scale: [1, 2, 2, 1, 1],
-                                rotate: [0, 0, 270, 270, 0],
-                                borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-                              }}>
+                            initial={{ scale: 0, rotate: 180}}
+                            animate={{ rotate: 0, scale: 1 }}
+                            transition={{
+                                delay: 1,
+                                type: "spring",
+                                stiffness: 260,
+                                damping: 20
+                            }}>
                                 <FontAwesomeIcon className="icon" icon={faLinkedin} />
                         </motion.div>
                     </CustomLink>
-                    <p className="link">
-                        <a href="https://www.linkedin.com/in/hwiseongahn/">
-                            LINKED
-                            
-                        </a>
-                    </p>
+                    <CustomLink to="https://github.com/hwiseongahn">
+                        <motion.p
+                            className="github-text"
+                            variants={slideUpAnimation}
+                            initial="initial"
+                            whileInView="animate"
+                            transition={{
+                                delay:0.5,
+                            }}
+                            viewport={{
+                                once: true,
+                            }}>
+                            GITHUB
+                        </motion.p>
+                        <motion.div
+                            initial={{ scale: 0, rotate: 180}}
+                            animate={{ rotate: 0, scale: 1 }}
+                            transition={{
+                                delay: 1,
+                                type: "spring",
+                                stiffness: 260,
+                                damping: 20
+                            }}>
+                                <FontAwesomeIcon className="icon" icon={faSquareGithub} />
+                        </motion.div>
+                    </CustomLink>
                 </div>
         </nav>
     );
 };
+
+const slideUpAnimation = {
+    initial: {
+        opacity: 0,
+        y: 50,
+    },
+    animate: {
+        opacity: 1,
+        y: 0,
+    }
+}
+
 
 function CustomLink({ to, children, ...props }) {
     const resolvedPath = useResolvedPath(to)

@@ -9,7 +9,7 @@ import "./App.scss";
 function Home() {
         return (
             <>
-                <div className="Hero">
+                <div className="hero">
                     <Hero/>
                 </div>
             </>
