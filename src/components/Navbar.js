@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 import "../scss/navbar.scss";
 
@@ -32,11 +33,46 @@ const Navbar = () => {
     return <ScreenWidthCheck />;
 };
 
-const NavbarMobile = () => {
+const MobileNavLinks = ({open, setOpen }) => {
+    const onLinkClick = () => {
+        setOpen(!open);
+    };
+    
     return (
-        <div>
-            THIS MEANS THE NAVBAR IS MOBILE!!!
+        <>
+        <div className="link-container">
+            <Link className="link" to="/AboutUs" onClick={onLinkClick}>
+                About
+            </Link>
+            <Link className="link" to="/Projects" onClick={onLinkClick}>
+                Projects
+            </Link>
         </div>
+            
+        </>
+    );
+};
+
+const NavbarMobile = () => {
+    const [open, setOpen] = useState(false);
+
+    const onHamburgerClick = () => setOpen(!open);
+    const linksVisible = open ? (
+        <MobileNavLinks open={open} setOpen={setOpen} />
+    ) : (
+        <></>
+    );
+
+    return (
+        <nav className="navbar-mobile">
+            <div className="navbar-top">
+                <Link className="logo" to="/">HWISEONG AHN</Link>
+            </div>
+            <div className="navbar-bottom">
+            <Link className="link" onClick={onHamburgerClick}><FontAwesomeIcon className="hamburger-icon" icon={faBars} /></Link>
+            </div>
+            <div className="linksContainer">{linksVisible}</div>
+        </nav>
     );
 };
 
