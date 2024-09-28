@@ -77,6 +77,27 @@ const NavbarMobile = () => {
 };
 
 const NavbarDesktop = () => {
+    const [pageLoaded, setPageLoaded] = useState(false);
+
+    useEffect(() => {
+
+        const handleLoad = () => {
+            setPageLoaded(true);
+            sessionStorage.setItem('pageLoaded', 'true');
+        };
+    
+        const storedPageLoaded = sessionStorage.getItem('pageLoaded');
+        if (storedPageLoaded === 'true') {
+            setPageLoaded(true);
+        }
+
+        window.addEventListener('load', handleLoad);
+
+        return () => {
+            window.removeEventListener('load', handleLoad);
+        };
+    }, []);
+
     return (
         <nav className="navbar">
                 <div className="navbar-left">
@@ -90,19 +111,17 @@ const NavbarDesktop = () => {
                             className="linked-text"
                             variants={slideUpAnimation}
                             initial="initial"
-                            whileInView="animate"
+                            whileInView={pageLoaded ? "animate" : "initial"}
                             transition={{
-                                delay:0.5,
-                            }}
-                            viewport={{
-                                once: true,
+                                delay:0.75,
                             }}
                         >
                             LINKED
                         </motion.p>
                         <motion.div
-                            initial={{ scale: 0, rotate: 180}}
-                            animate={{ rotate: 0, scale: 1 }}
+                            variants={springAnimation}
+                            initial="initial"
+                            whileInView={pageLoaded ? "animate" : "initial"}
                             transition={{
                                 delay: 1,
                                 type: "spring",
@@ -117,18 +136,17 @@ const NavbarDesktop = () => {
                             className="github-text"
                             variants={slideUpAnimation}
                             initial="initial"
-                            whileInView="animate"
+                            whileInView={pageLoaded ? "animate" : "initial"}
                             transition={{
-                                delay:0.5,
+                                delay:0.75,
                             }}
-                            viewport={{
-                                once: true,
-                            }}>
+                        >
                             GITHUB
                         </motion.p>
                         <motion.div
-                            initial={{ scale: 0, rotate: 180}}
-                            animate={{ rotate: 0, scale: 1 }}
+                            variants={springAnimation}
+                            initial= "initial"
+                            whileInView={pageLoaded ? "animate" : "initial"}
                             transition={{
                                 delay: 1,
                                 type: "spring",
@@ -145,12 +163,19 @@ const NavbarDesktop = () => {
 
 const slideUpAnimation = {
     initial: {
-        opacity: 0,
-        y: 50,
+        opacity: 0, y: 50,
     },
     animate: {
-        opacity: 1,
-        y: 0,
+        opacity: 1, y: 0,
+    }
+}
+
+const springAnimation = {
+    initial : {
+        scale: 0, rotate: 180,
+    },
+    animate : {
+        scale: 1, rotate: 0,
     }
 }
 
