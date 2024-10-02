@@ -6,7 +6,7 @@ import Hero from "./Components/Hero";
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 
-function Home() {
+const Home = () => {
         return (
             <>
                 <div className="hero">
@@ -14,22 +14,25 @@ function Home() {
                 </div>
             </>
         );
-        
 }
 
 function App() {
     return (
-        <>
-                <Navbar/>
+        <> 
                 <div className="container">
-                <Routes>
-                    <Route path= "/" element={<Home/>}/>
-                    <Route path ="/About" element={<About/>}/>
-                    <Route path= "/Projects" element={<Projects/>}/>
-                </Routes>
+                    <div className="navbar">
+                        <Navbar/>
+                    </div>
+                    <div className="content">
+                        <Routes>
+                            <Route path= "/" element={<Home/>}/>
+                            <Route path ="/About" element={<About/>}/>
+                            <Route path= "/Projects" element={<Projects/>}/>
+                        </Routes>
+                    </div>
                 </div>
         </>
-  );
+    );
 }
 
 export default App;

@@ -79,10 +79,12 @@
 
     .icon, .hamburger-icon {
         font-size: 3rem;
+        background-color: white;
     }
 
     .navbar-mobile {
         display: flex;
+        position: relative;
         flex-direction: column;
         font-size: 2rem;
     }
@@ -91,6 +93,9 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        position: relative;
+        z-index: 2;
+        background-color: white;
         .logo {
             align-self: center;
         }
@@ -98,8 +103,11 @@
 
     .navbar-bottom {
         display: flex;
+        background-color: white;
         flex-direction: row;
         justify-content: flex-end;
+        position: relative;
+        z-index: 2;
     }
 
     .link-container {
@@ -108,6 +116,8 @@
         justify-content: flex-start;
         background-color: white;
         width: 100%;
+        position: relative;
+        z-index: 1;
     }
 }
 

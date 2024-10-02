@@ -41,7 +41,10 @@ const MobileNavLinks = ({open, setOpen }) => {
     return (
         <>
         <div className="link-container">
-            <Link className="link" to="/AboutUs" onClick={onLinkClick}>
+        <Link className="link" to="/" onClick={onLinkClick}>
+                Home
+            </Link>
+            <Link className="link" to="/About" onClick={onLinkClick}>
                 About
             </Link>
             <Link className="link" to="/Projects" onClick={onLinkClick}>
@@ -69,9 +72,16 @@ const NavbarMobile = () => {
                 <Link className="logo" to="/">HWISEONG AHN</Link>
             </div>
             <div className="navbar-bottom">
-            <Link className="link" onClick={onHamburgerClick}><FontAwesomeIcon className="hamburger-icon" icon={faBars} /></Link>
+                <Link className="link" onClick={onHamburgerClick}><FontAwesomeIcon className="hamburger-icon" icon={faBars} /></Link>
             </div>
-            <div className="linksContainer">{linksVisible}</div>
+            <motion.div 
+                className="link-container"
+                variants={slideDownAnimation}
+                whileInView={open ? "animate" : "initial"}
+                transition={{duration : 1}}
+                >
+                {linksVisible}
+            </motion.div>
         </nav>
     );
 };
@@ -165,6 +175,16 @@ const slideUpAnimation = {
     initial: {
         opacity: 0, y: 50,
     },
+    animate: {
+        opacity: 1, y: 0,
+    }
+}
+
+const slideDownAnimation = {
+    initial: {
+        opacity: 0, y: -500,
+    },
+
     animate: {
         opacity: 1, y: 0,
     }
