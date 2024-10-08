@@ -10,3 +10,17 @@ img {
     height: calc((var(--window-height) - 41px));
     margin: 0;
 }
+
+@media only screen and (max-width: 649px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: calc((var(--window-height) - 49px));
+        margin: 0;
+    }
+
+    img {
+        align-self: flex-end;
+    }
+}
+

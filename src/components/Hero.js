@@ -1,14 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import newYorkNight from "../assets/newyorkplease.png";
 import "../scss/hero.scss";
 function Hero() {
-    
-    const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
     useEffect(() => {
         const handleResize = () => {
             const height = window.innerHeight;
-            setWindowHeight(height);
 
             document.documentElement.style.setProperty('--window-height', `${height}px`);
         };

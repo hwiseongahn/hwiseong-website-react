@@ -86,39 +86,47 @@
         display: flex;
         position: relative;
         flex-direction: column;
+        justify-content: space-between;
         font-size: 2rem;
-    }
-        
-    .navbar-top {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        position: relative;
-        z-index: 2;
-        background-color: white;
-        .logo {
-            align-self: center;
+        .navbar-top {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+        .navbar-left {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            background-color: white;
+            .logo {
+                align-self: center;
+                font-size: 1rem;
+            }
+        }
+        .navbar-right {
+            display: flex;
+            background-color: white;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            z-index: 2;
+        }
+        .link-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: white;
+            width: 100%;
+            position: relative;
+            z-index: 1;
         }
     }
 
-    .navbar-bottom {
-        display: flex;
-        background-color: white;
-        flex-direction: row;
-        justify-content: flex-end;
-        position: relative;
-        z-index: 2;
-    }
-
-    .link-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        background-color: white;
-        width: 100%;
-        position: relative;
-        z-index: 1;
-    }
+    
+    
 }
 
 

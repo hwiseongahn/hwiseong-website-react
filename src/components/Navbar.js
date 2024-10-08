@@ -69,16 +69,18 @@ const NavbarMobile = () => {
     return (
         <nav className="navbar-mobile">
             <div className="navbar-top">
-                <Link className="logo" to="/">HWISEONG AHN</Link>
-            </div>
-            <div className="navbar-bottom">
-                <Link className="link" onClick={onHamburgerClick}><FontAwesomeIcon className="hamburger-icon" icon={faBars} /></Link>
+                <div className="navbar-left">
+                    <Link className="logo" to="/">HWISEONG<br/>AHN</Link>
+                </div>
+                <div className="navbar-right">
+                    <Link className="link" onClick={onHamburgerClick}><FontAwesomeIcon className="hamburger-icon" icon={faBars} /></Link>
+                </div>
             </div>
             <motion.div 
                 className="link-container"
                 variants={slideDownAnimation}
                 whileInView={open ? "animate" : "initial"}
-                transition={{duration : 1}}
+                transition={{duration : 0.5}}
                 >
                 {linksVisible}
             </motion.div>
@@ -86,7 +88,7 @@ const NavbarMobile = () => {
     );
 };
 
-const NavbarDesktop = () => {
+const NavbarDesktop = () => {   
     const [pageLoaded, setPageLoaded] = useState(false);
 
     useEffect(() => {

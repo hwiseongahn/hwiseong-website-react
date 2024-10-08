@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -14,24 +13,37 @@ body {
     align-content: center;
 }
 
-html,
-body,
-#root,
-.App {
+html, body, #root, .App {
     position: relative;
     height: 100%;
 }
 
 .container {
     display: flex;
-    position: relative;
     flex-direction: column;
     .navbar {
         position: relative;
         z-index: 2;
     }
     .content {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 649px) {
+
+    .container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        .navbar {
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
     }
 }
