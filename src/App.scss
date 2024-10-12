@@ -28,22 +28,28 @@ html, body, #root, .App {
     .content {
         position: relative;
         z-index: 1;
+        height: 100vh;
+        width: auto;
     }
 }
 
 @media only screen and (max-width: 649px) {
 
-    .container {
+    .app-container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         .navbar {
             position: absolute;
+            top: 0px;
             z-index: 2;
             width: 100%;
         }
         .content {
             position: relative;
+            top: 49px; //navbar height is 49px
             z-index: 1;
+            width: max-content;
+            align-self: flex-end;
         }
     }
 }

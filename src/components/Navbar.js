@@ -184,7 +184,7 @@ const slideUpAnimation = {
 
 const slideDownAnimation = {
     initial: {
-        opacity: 0, y: -500,
+        opacity: 1, y: -500,
     },
 
     animate: {

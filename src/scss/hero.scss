@@ -8,6 +8,7 @@ img {
     display: flex;
     justify-content: space-around;
     height: calc((var(--window-height) - 41px));
+    width: auto;
     margin: 0;
 }
 
@@ -20,7 +21,7 @@ img {
     }
 
     img {
-        align-self: flex-end;
+        align-self: center;
     }
 }
 
