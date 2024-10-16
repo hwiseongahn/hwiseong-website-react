@@ -57,18 +57,11 @@ const MobileNavLinks = ({open, setOpen }) => {
 };
 
 const NavbarMobile = () => {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
     const onHamburgerClick = () => {
         setOpen(!open);
         document.documentElement.style.setProperty('--animation', open ? 'slideDown' : 'slideUp');
     }
-        
-        
-    const linksVisible = open ? (
-        <MobileNavLinks open={open} setOpen={setOpen} />
-    ) : (
-        <></>
-    );
 
     return (
         <nav className="navbar-mobile">
@@ -176,16 +169,6 @@ const slideUpAnimation = {
     },
     animate: {
         opacity: 1, y: 0,
-    }
-}
-
-const slideDownAnimation = {
-    initial: {
-        opacity: 1, y: '-100vh',
-    },
-
-    animate: {
-        opacity: 1, y:0,
     }
 }
 

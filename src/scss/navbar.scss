@@ -133,14 +133,14 @@
               }
         }
         .link-container {
-            animation: var(--animation) 1s ease-out forwards;
+            animation: var(--animation) 0.2s ease-out forwards;
             position: absolute;
             top: calc(49px - 100vh + 49px);
             height: calc(100vh - 49px);
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            background-color:pink;
+            background-color:white;
             width: 100%;
             z-index: 1;
         }
