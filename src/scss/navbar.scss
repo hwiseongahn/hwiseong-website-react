@@ -1,0 +1,158 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+@font-face {
+    font-family: helvetica-regular;
+    src: url(../../public/HelveticaNeue-01.ttf);
+}
+@font-face {
+    font-family: helvetica-bold;
+    src: url(../../public/HelveticaNeue-Bold-02.ttf);
+}
+
+@media only screen and (min-width: 650px) {
+
+    body {
+        margin: 0;
+    }
+
+    * {
+        margin: 0;
+    }
+
+    nav {
+        font-family: helvetica-regular;
+        font-size: 1rem;
+        margin: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        min-height: 1.5rem;
+        padding: 0.5rem 0rem 0.5rem 0rem;
+        border-bottom: 1px solid rgb(225,225,225);
+       
+
+        .active-link, .link:hover {
+            font-family: helvetica-bold;
+            color: black;
+            text-decoration: underline;
+            padding-bottom: 0.1rem;
+        }
+        
+        .navbar-left {    
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 1.5rem;
+            padding-left: 1rem;
+        }
+        
+        .navbar-right {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            align-items: center;
+            gap: 1.5rem;
+            padding-right: 1rem;
+        }
+
+    }
+     
+    .link, .logo {
+        display: flex;
+        flex-direction: row;
+        gap: 0.05rem;
+        color:black;
+        text-decoration: none;
+    }
+
+    .icon {
+        font-size: 1rem;
+        color: black;
+    }
+    
+}
+
+@media only screen and (max-width: 649px) {
+    .link, .logo {
+        color:black;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        .icon {
+                font-size: 2rem;
+                margin-top: 0.3rem;
+            }
+    }
+
+    .icon, .hamburger-icon {
+        font-size: 3rem;
+        background-color: white;
+    }
+
+    .navbar-mobile {
+        display: fixed;
+        position: relative;
+        flex-direction: column;
+        justify-content: flex-end;
+        font-size: 2rem;
+        overflow: visible;
+        .navbar-top {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: 1px solid rgb(225,225,225);
+        }
+        .navbar-left {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            position: relative;
+            z-index: 2;
+            background-color: white;
+            width: calc(100vw - 42px);
+            .logo {
+                align-self: center;
+                font-size: 1rem;
+                font-family: helvetica-bold;
+            }
+        }
+        .navbar-right {
+            display: flex;
+            background-color: white;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(0);
+              }
+              100% {
+                transform: translateY(100%);
+              }
+        }
+        @keyframes slideUp {
+            0% {
+                transform: translateY(100%);
+              }
+              100% {
+                transform: translateY(0);
+              }
+        }
+        .link-container {
+            animation: var(--animation) 0.2s ease-out forwards;
+            position: absolute;
+            top: calc(49px - 100vh + 49px);
+            height: calc(100vh - 49px);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color:white;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+}
+
+
