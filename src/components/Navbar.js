@@ -36,6 +36,7 @@ const Navbar = () => {
 const MobileNavLinks = ({open, setOpen }) => {
     const onLinkClick = () => {
         setOpen(!open);
+        document.documentElement.style.setProperty('--animation', "null");
     };
     
     return (
