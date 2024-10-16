@@ -58,8 +58,12 @@ const MobileNavLinks = ({open, setOpen }) => {
 
 const NavbarMobile = () => {
     const [open, setOpen] = useState(false);
-
-    const onHamburgerClick = () => setOpen(!open);
+    const onHamburgerClick = () => {
+        setOpen(!open);
+        document.documentElement.style.setProperty('--animation', open ? 'slideDown' : 'slideUp');
+    }
+        
+        
     const linksVisible = open ? (
         <MobileNavLinks open={open} setOpen={setOpen} />
     ) : (
@@ -76,14 +80,7 @@ const NavbarMobile = () => {
                     <Link className="link" onClick={onHamburgerClick}><FontAwesomeIcon className="hamburger-icon" icon={faBars} /></Link>
                 </div>
             </div>
-            <motion.div 
-                className="link-container"
-                variants={slideDownAnimation}
-                whileInView={open ? "animate" : "initial"}
-                transition={{duration : 0.5}}
-                >
-                {linksVisible}
-            </motion.div>
+                <MobileNavLinks open={open} setOpen={setOpen} />    
         </nav>
     );
 };
@@ -184,11 +181,11 @@ const slideUpAnimation = {
 
 const slideDownAnimation = {
     initial: {
-        opacity: 1, y: -500,
+        opacity: 1, y: '-100vh',
     },
 
     animate: {
-        opacity: 1, y: 0,
+        opacity: 1, y:0,
     }
 }
 
