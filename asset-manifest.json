@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/hwiseong-website-react/static/css/main.0d109d31.css",
+    "main.js": "/hwiseong-website-react/static/js/main.d2d5ade4.js",
+    "static/js/453.d9a4e48c.chunk.js": "/hwiseong-website-react/static/js/453.d9a4e48c.chunk.js",
+    "static/media/newyorkplease.png": "/hwiseong-website-react/static/media/newyorkplease.cd582ffa9b0aa05e001d.png",
+    "static/media/HelveticaNeue-01.ttf": "/hwiseong-website-react/static/media/HelveticaNeue-01.17a020bf11fc27cee48c.ttf",
+    "static/media/HelveticaNeue-Bold-02.ttf": "/hwiseong-website-react/static/media/HelveticaNeue-Bold-02.686aa658e4be9560ab69.ttf",
+    "index.html": "/hwiseong-website-react/index.html",
+    "main.0d109d31.css.map": "/hwiseong-website-react/static/css/main.0d109d31.css.map",
+    "main.d2d5ade4.js.map": "/hwiseong-website-react/static/js/main.d2d5ade4.js.map",
+    "453.d9a4e48c.chunk.js.map": "/hwiseong-website-react/static/js/453.d9a4e48c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0d109d31.css",
+    "static/js/main.d2d5ade4.js"
+  ]
+}
