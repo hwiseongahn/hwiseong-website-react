@@ -56,7 +56,7 @@ const MobileNavLinks = ({open, setOpen }) => {
                     className="linked-text"
                     variants={slideUpAnimation}
                     initial="initial"
-                    whileInView={"animate"}
+                    animate={open ? "initial" : "animate"}
                     transition={{delay:0.5}}
                 >
                     Linked
@@ -64,7 +64,7 @@ const MobileNavLinks = ({open, setOpen }) => {
                 <motion.div
                     variants={springAnimation}
                     initial="initial"
-                    whileInView={"animate"}
+                    animate={open ? "initial" : "animate"}
                     transition={{
                         delay: 0.75,
                         type: "spring",
@@ -79,7 +79,7 @@ const MobileNavLinks = ({open, setOpen }) => {
                     className="linked-text"
                     variants={slideUpAnimation}
                     initial="initial"
-                    whileInView={"animate"}
+                    animate={open ? "initial" : "animate"}
                     transition={{delay:0.5}}
                 >
                     Github
@@ -87,7 +87,7 @@ const MobileNavLinks = ({open, setOpen }) => {
                 <motion.div
                     variants={springAnimation}
                     initial="initial"
-                    whileInView={"animate"}
+                    animate={open ? "initial" : "animate"}
                     transition={{
                         delay: 0.75,
                         type: "spring",
@@ -110,14 +110,22 @@ const NavbarMobile = () => {
         document.documentElement.style.setProperty('--animation', open ? 'slideDown' : 'slideUp');
     }
 
+    const onLogoClick = () => {
+        if (!open) {
+            setOpen(!open);
+        }
+        document.documentElement.style.setProperty('--animation', "null");
+
+    }
+
     return (
         <nav className="navbar-mobile">
             <div className="navbar-top">
                 <div className="navbar-left">
-                    <Link className="logo" to="/">HWISEONG<br/>AHN</Link>
+                    <Link className="logo" onClick={onLogoClick} to="/">HWISEONG<br/>AHN</Link>
                 </div>
                 <div className="navbar-right">
-                    <Link className="link" onClick={onHamburgerClick}><FontAwesomeIcon className="hamburger-icon" icon={open ? faBars : faX} transform={open ? {rotate:0} : {rotate: 90}} fixedWidth/></Link>
+                    <Link className="link" onClick={onHamburgerClick}><FontAwesomeIcon className="hamburger-icon" icon={open ? faBars: faX} transform={open ? {rotate:0} : {rotate: 90}} fixedWidth/></Link>
                 </div>
             </div>
             <MobileNavLinks open={open} setOpen={setOpen} />    

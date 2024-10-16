@@ -108,11 +108,12 @@
             position: relative;
             z-index: 2;
             background-color: white;
-            width: calc(100vw - 42px);
+            width: calc(100vw - 60px);
             .logo {
                 align-self: center;
                 font-size: 1rem;
                 font-family: helvetica-bold;
+                padding-left: 9px;
             }
         }
         .navbar-right {
