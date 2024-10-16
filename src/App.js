@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "./Components/Navbar";
-import About from "./Components/About";
-import Projects from "./Components/Projects";
-import Hero from "./Components/Hero";
+import Navbar from "src/components/Navbar.js";
+import About from "src/components/About.js";
+import Projects from "src/components/Projects.js";
+import Hero from "src/components/Hero.js";
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 
