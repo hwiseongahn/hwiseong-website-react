@@ -1,7 +1,6 @@
 {
   "name": "hwiseong-website-react",
   "version": "0.1.0",
-  "homepage": "https://hwiseongahn.github.io/hwiseong-website-react",
   "private": true,
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
