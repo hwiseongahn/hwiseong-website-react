@@ -75,6 +75,17 @@
     .link, .logo {
         color:black;
         text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        div .icon {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .icon {
+                font-size: 2rem;
+                margin-top: 0.3rem;
+            }
     }
 
     .icon, .hamburger-icon {
