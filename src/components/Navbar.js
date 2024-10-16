@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 import "../scss/navbar.scss";
 
@@ -71,10 +71,10 @@ const NavbarMobile = () => {
                     <Link className="logo" to="/">HWISEONG<br/>AHN</Link>
                 </div>
                 <div className="navbar-right">
-                    <Link className="link" onClick={onHamburgerClick}><FontAwesomeIcon className="hamburger-icon" icon={faBars} /></Link>
+                    <Link className="link" onClick={onHamburgerClick}><FontAwesomeIcon className="hamburger-icon" icon={open ? faBars : faX} transform={open ? {rotate:0} : {rotate: 90}} fixedWidth/></Link>
                 </div>
             </div>
-                <MobileNavLinks open={open} setOpen={setOpen} />    
+            <MobileNavLinks open={open} setOpen={setOpen} />    
         </nav>
     );
 };
