@@ -38,6 +38,12 @@ const MobileNavLinks = ({open, setOpen }) => {
         setOpen(!open);
         document.documentElement.style.setProperty('--animation', "null");
     };
+
+    const slideUpTransition = {
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      };
     
     return (
         <>
@@ -53,47 +59,45 @@ const MobileNavLinks = ({open, setOpen }) => {
             </Link>
             <Link className="link" to="https://www.linkedin.com/in/hwiseongahn/">
                 <motion.p
-                    className="linked-text"
                     variants={slideUpAnimation}
+                    key={open ? "open-linked" : "closed-linked"}
                     initial="initial"
-                    animate={open ? "initial" : "animate"}
-                    transition={{delay:0.5}}
+                    whileInView={"animate"}
+                    transition={open ? {delay:0} : {delay:0.25}}
                 >
                     Linked
                 </motion.p>
                 <motion.div
                     variants={springAnimation}
+                    key={open ? "open-in" : "closed-in"}
                     initial="initial"
-                    animate={open ? "initial" : "animate"}
+                    whileInView={"animate"}
                     transition={{
-                        delay: 0.75,
-                        type: "spring",
-                        stiffness: 260,
-                        damping: 20
-                    }}>
+                        ...slideUpTransition,
+                        delay: open ? 0 : 0.5,
+                      }}>
                         <FontAwesomeIcon className="icon" icon={faLinkedin} />
                 </motion.div>
             </Link>
             <Link className="link" to="https://github.com/hwiseongahn">
                 <motion.p
-                    className="linked-text"
+                    key={open ? "open-github" : "closed-github"}
                     variants={slideUpAnimation}
                     initial="initial"
-                    animate={open ? "initial" : "animate"}
-                    transition={{delay:0.5}}
+                    whileInView={"animate"}
+                    transition={open ? {delay:0} : {delay:0.25}}
                 >
                     Github
                 </motion.p>
                 <motion.div
+                    key={open ? "open-git-icon" : "closed-git-icon"}
                     variants={springAnimation}
                     initial="initial"
-                    animate={open ? "initial" : "animate"}
+                    whileInView={"animate"}
                     transition={{
-                        delay: 0.75,
-                        type: "spring",
-                        stiffness: 260,
-                        damping: 20
-                    }}>
+                        ...slideUpTransition,
+                        delay: open ? 0 : 0.5,
+                      }}>
                         <FontAwesomeIcon className="icon" icon={faSquareGithub} />
                 </motion.div>
             </Link>
