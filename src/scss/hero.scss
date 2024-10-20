@@ -14,7 +14,7 @@ img {
 
 @media only screen and (max-width: 649px) {
     .container {
-        display: flex;
+        display: flex;  
         flex-direction: column;
         height: calc((var(--window-height) - 49px));
         margin: 0;

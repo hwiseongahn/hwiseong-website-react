@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
 @font-face {
     font-family: helvetica-regular;
     src: url(../../public/HelveticaNeue-01.ttf);
@@ -108,7 +109,7 @@
             position: relative;
             z-index: 2;
             background-color: white;
-            width: calc(100vw - 60px);
+            width: calc(100vw - 200px);
             .logo {
                 align-self: center;
                 font-size: 1rem;
@@ -118,31 +119,15 @@
         }
         .navbar-right {
             display: flex;
+            flex-direction: row;
             background-color: white;
-            flex-direction: column;
             justify-content: flex-end;
             position: relative;
             z-index: 2;
         }
 
-        @keyframes slideDown {
-            0% {
-                transform: translateY(0);
-              }
-              100% {
-                transform: translateY(100%);
-              }
-        }
-        @keyframes slideUp {
-            0% {
-                transform: translateY(100%);
-              }
-              100% {
-                transform: translateY(0);
-              }
-        }
         .link-container {
-            animation: var(--animation) 0.2s ease-out forwards;
+            animation: var(--slideAnimation) 0.2s ease-out forwards ;
             position: absolute;
             top: calc(49px - 100vh + 49px);
             height: calc(100vh - 49px);
@@ -155,5 +140,23 @@
         }
     }
 }
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(100%);
+      }
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+}
+
 
 

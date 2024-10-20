@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {SunIcon, MoonIcon} from '../assets';
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faSquareGithub} from "@fortawesome/free-brands-svg-icons";
 import "../scss/navbar.scss";
 
 const Navbar = () => {
@@ -36,7 +37,7 @@ const Navbar = () => {
 const MobileNavLinks = ({open, setOpen }) => {
     const onLinkClick = () => {
         setOpen(!open);
-        document.documentElement.style.setProperty('--animation', "null");
+        document.documentElement.style.setProperty('--slideAnimation', "null");
     };
 
     const slideUpTransition = {
@@ -111,14 +112,14 @@ const NavbarMobile = () => {
     const [open, setOpen] = useState(true);
     const onHamburgerClick = () => {
         setOpen(!open);
-        document.documentElement.style.setProperty('--animation', open ? 'slideDown' : 'slideUp');
+        document.documentElement.style.setProperty('--slideAnimation', open ? 'slideDown' : 'slideUp');
     }
 
     const onLogoClick = () => {
         if (!open) {
             setOpen(!open);
         }
-        document.documentElement.style.setProperty('--animation', "null");
+        document.documentElement.style.setProperty('--slideAnimation', "null");
 
     }
 
@@ -129,6 +130,7 @@ const NavbarMobile = () => {
                     <Link className="logo" onClick={onLogoClick} to="/">HWISEONG<br/>AHN</Link>
                 </div>
                 <div className="navbar-right">
+                    <Link classname="link"><SunIcon width="50" height="50"/></Link>
                     <Link className="link" onClick={onHamburgerClick}><FontAwesomeIcon className="hamburger-icon" icon={open ? faBars: faX} transform={open ? {rotate:0} : {rotate: 90}} fixedWidth/></Link>
                 </div>
             </div>
