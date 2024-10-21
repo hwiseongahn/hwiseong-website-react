@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {SunIcon, MoonIcon} from '../assets';
+import {SunIcon} from '../assets';
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faSquareGithub} from "@fortawesome/free-brands-svg-icons";
 import "../scss/navbar.scss";
