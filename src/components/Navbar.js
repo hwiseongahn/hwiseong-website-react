@@ -110,6 +110,7 @@ const MobileNavLinks = ({open, setOpen }) => {
 
 const NavbarMobile = () => {
     const [open, setOpen] = useState(true);
+    const [darkMode, setDark] = useState(true);
     const onHamburgerClick = () => {
         setOpen(!open);
         document.documentElement.style.setProperty('--slideAnimation', open ? 'slideDown' : 'slideUp');
@@ -120,7 +121,11 @@ const NavbarMobile = () => {
             setOpen(!open);
         }
         document.documentElement.style.setProperty('--slideAnimation', "null");
+    }
 
+    const onSunClick = () => {
+        setDark(!darkMode);
+        document.documentElement.style.setProperty('--fadeAnimation', darkMode ? "fadeDark" : "fadeLight");
     }
 
     return (
@@ -130,7 +135,7 @@ const NavbarMobile = () => {
                     <Link className="logo" onClick={onLogoClick} to="/">HWISEONG<br/>AHN</Link>
                 </div>
                 <div className="navbar-right">
-                    <Link classname="link"><SunIcon width="50" height="50"/></Link>
+                    <Link className="link" onClick={onSunClick}><SunIcon className="sun-icon"/></Link>
                     <Link className="link" onClick={onHamburgerClick}><FontAwesomeIcon className="hamburger-icon" icon={open ? faBars: faX} transform={open ? {rotate:0} : {rotate: 90}} fixedWidth/></Link>
                 </div>
             </div>

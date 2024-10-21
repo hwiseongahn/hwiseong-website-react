@@ -84,6 +84,19 @@
             }
     }
 
+    .link .sun-icon {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+    }
+    
+    .sun-icon {
+        align-self: center;
+        width: auto;
+        height: 40px;
+        margin-right: 5px;
+    }
+
     .icon, .hamburger-icon {
         font-size: 3rem;
         background-color: white;
@@ -127,17 +140,28 @@
         }
 
         .link-container {
-            animation: var(--slideAnimation) 0.2s ease-out forwards ;
+            background-color: white;
+            animation: var(--slideAnimation) 0.2s ease-out forwards, var(--fadeAnimation) 0.2s ease-in-out forwards;
             position: absolute;
             top: calc(49px - 100vh + 49px);
             height: calc(100vh - 49px);
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            background-color:white;
             width: 100%;
             z-index: 1;
         }
+    }
+
+    .navbar-left, 
+    .logo, 
+    .hamburger-icon, 
+    .sun-icon, 
+    .navbar-right, 
+    body,
+    .icon, 
+    .link {
+        animation: var(--fadeAnimation) 0.2s ease-in-out forwards;
     }
 }
 
@@ -156,6 +180,32 @@
       100% {
         transform: translateY(0);
       }
+}
+
+@keyframes fadeDark {
+    0% {
+        background-color: white;
+        color:black;
+        fill: black;
+      }
+      100% {
+        background-color: black;
+        color: white;
+        fill: white;
+      }
+}
+
+@keyframes fadeLight {
+    0% {
+    background-color: black;
+    color:white;
+    fill:white;
+  }
+  100% {
+    background-color: white;
+    color: black;
+    fill: black;
+  }
 }
 
 
