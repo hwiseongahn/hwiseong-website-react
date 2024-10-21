@@ -141,7 +141,8 @@
 
         .link-container {
             background-color: white;
-            animation: var(--slideAnimation) 0.2s ease-out forwards, var(--fadeAnimation) 0.2s ease-in-out forwards;
+            animation: var(--slideAnimation, none) 0.2s ease-out forwards, 
+                var(--fadeAnimation, none) 0.2s ease-in-out forwards;
             position: absolute;
             top: calc(49px - 100vh + 49px);
             height: calc(100vh - 49px);
@@ -152,7 +153,7 @@
             z-index: 1;
         }
     }
-
+    .navbar-top,
     .navbar-left, 
     .logo, 
     .hamburger-icon, 
@@ -160,7 +161,8 @@
     .navbar-right, 
     body,
     .icon, 
-    .link {
+    .link 
+    {
         animation: var(--fadeAnimation) 0.2s ease-in-out forwards;
     }
 }
