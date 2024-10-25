@@ -128,11 +128,11 @@
         justify-content: flex-end;
         font-size: 2rem;
         overflow: visible;
+        border-bottom: 2px solid rgb(225,225,225);
         .navbar-top {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            border-bottom: 1px solid rgb(225,225,225);
         }
         .navbar-left {
             display: flex;
@@ -164,7 +164,7 @@
                 var(--fadeAnimation, none) 0.2s ease-in-out forwards;
             position: absolute;
             top: calc(49px - 100vh + 49px);
-            height: calc(100vh - 49px);
+            height: calc(100vh - 52px);
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -191,7 +191,7 @@
         transform: translateY(0);
       }
       100% {
-        transform: translateY(100%);
+        transform: translateY(calc(100% + 4px));
       }
 }
 @keyframes slideUp {
