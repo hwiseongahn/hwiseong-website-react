@@ -31,10 +31,12 @@ const Navbar = () => {
             </>
         );
     };
+
     return <ScreenWidthCheck />;
 };
 
 const MobileNavLinks = ({open, setOpen }) => {
+
     const onLinkClick = () => {
         setOpen(!open);
         document.documentElement.style.setProperty('--slideAnimation', "null");
@@ -146,6 +148,12 @@ const NavbarMobile = () => {
 
 const NavbarDesktop = () => {   
     const [pageLoaded, setPageLoaded] = useState(false);
+    const [darkMode, setDark] = useState(true);
+
+    const onSunClick = () => {
+        setDark(!darkMode);
+        document.documentElement.style.setProperty('--fadeAnimation', darkMode ? "fadeDark" : "fadeLight");
+    }
 
     useEffect(() => {
 
@@ -174,6 +182,7 @@ const NavbarDesktop = () => {
                     <CustomLink to="/Projects">PROJECTS</CustomLink>
                 </div>
                 <div className="navbar-right">
+                <CustomLink onClick={onSunClick}><SunIcon className="sun-icon"/></CustomLink>
                     <CustomLink to="https://www.linkedin.com/in/hwiseongahn/">
                         <motion.p
                             className="linked-text"
