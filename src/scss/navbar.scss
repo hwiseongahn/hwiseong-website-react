@@ -84,7 +84,8 @@
     .navbar-right, 
     body,
     .icon, 
-    .link 
+    .link,
+    .active-link
     {
         animation: var(--fadeAnimation) 0.2s ease-in-out forwards;
     }
@@ -172,6 +173,7 @@
             z-index: 1;
         }
     }
+
     .navbar-top,
     .navbar-left, 
     .logo, 
@@ -180,7 +182,8 @@
     .navbar-right, 
     body,
     .icon, 
-    .link 
+    .link,
+    .active-link
     {
         animation: var(--fadeAnimation) 0.2s ease-in-out forwards;
     }
