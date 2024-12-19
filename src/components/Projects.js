@@ -1,9 +1,11 @@
 import React from 'react'
 import "../scss/projects.scss";
+
 function Projects() {
   return (
-    <div className="container">
-        <h1>Projects section</h1>
+    <div className="projects-container">
+        <h1>Projects</h1>
+        <p className = "projects-text">These are some projects I've created.</p>
     </div>
   )
 }
