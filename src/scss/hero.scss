@@ -1,19 +1,22 @@
-img {
-    height: 90%;
-    width: auto;
-    align-self: center;
-}
 
-.container {
-    display: flex;
-    justify-content: space-around;
-    height: calc((var(--window-height) - 41px));
-    width: auto;
-    margin: 0;
+@media only screen and (min-width: 650px) {
+    img {
+        height: 90%;
+        width: auto;
+        align-self: center;
+    }
+
+    .hero-container {
+        display: flex;
+        justify-content: space-around;
+        height: calc((var(--window-height) - 41px));
+        width: auto;
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width: 649px) {
-    .container {
+    .hero-container {
         display: flex;  
         flex-direction: column;
         height: calc((var(--window-height) - 49px));

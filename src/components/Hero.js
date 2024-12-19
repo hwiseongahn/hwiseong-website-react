@@ -17,7 +17,7 @@ function Hero() {
     }, []);
 
   return (
-    <div className='container'>
+    <div className='hero-container'>
         <img src={newYorkNight} alt="New York Skyline during the night"/>
     </div>
   )
