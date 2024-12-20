@@ -24,20 +24,22 @@
 
 @media only screen and (max-width: 649px) {
 
-    .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    text-align: center;
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        gap: 1rem;
+        align-items: center;
     }
 
     h1 {
-        margin-top: 3rem;
+        width: 80%;
+        text-align: center;
+        margin-top: 2rem;
     }
 
     .about-me-text {
-        width: 50%;
+        width: 90vw;
         text-align: center;
         line-height: 1.5rem;
     }

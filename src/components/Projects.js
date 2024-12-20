@@ -5,7 +5,7 @@ function Projects() {
   return (
     <div className="projects-container">
         <h1>Projects</h1>
-        <p className = "projects-text">These are some projects I've created.</p>
+        <p>These are some projects I've created.</p>
     </div>
   )
 }

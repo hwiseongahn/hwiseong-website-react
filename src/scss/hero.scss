@@ -21,6 +21,7 @@
         flex-direction: column;
         height: calc((var(--window-height) - 49px));
         margin: 0;
+        justify-content: space-around;
     }
 
     img {
