@@ -40,7 +40,7 @@
         align-items: start;
         grid-template-areas: 
         "card-title card-image"
-        "card-description card-image";
+        "card-desc card-desc";
         width: 90vw;
         border: 1px solid lightgray;
         border-radius: 10px;
@@ -49,17 +49,21 @@
         .card-image {
             width: auto;
             height: 30vw;
+            justify-self: right;
+            margin: 0 5px 0 0;
         }
 
         .card-title {
             height: 30vw;
             width: auto;
             font-size: clamp(1rem, 15vw, 7vw);
+            line-height: 1;
             margin: 0 0 0 5px;
         }
 
         .card-desc {
-            margin: 0 0 5px 0;
+            margin: 0 0 5px 5px;
+            grid-area: card-desc;
         }
     
         h1 {

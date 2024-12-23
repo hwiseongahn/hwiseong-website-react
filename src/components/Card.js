@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "../scss/card.scss";
 
-function Card({title, description, image}) {
+function Card({title, description, image, link="", linkDescription=""}) {
 
     const ScreenWidthCheck = () => {
             const [isDesktop, setDesktop] = useState(window.innerWidth >= 650);
@@ -18,9 +18,19 @@ function Card({title, description, image}) {
             return (
                 <>
                     {isDesktop ? (
-                        <CardDesktop title={title} image={image} description={description}/>
+                        <CardDesktop 
+                            title={title} 
+                            image={image} 
+                            description={description}
+                        />
                     ) : (
-                        <CardMobile title={title} image={image} description={description}/>
+                        <CardMobile 
+                            title={title} 
+                            image={image} 
+                            description={description} 
+                            link={link} 
+                            linkDescription={linkDescription}
+                        />
                     )}
                 </>
             );
@@ -28,26 +38,26 @@ function Card({title, description, image}) {
     return <ScreenWidthCheck />;
 }
 
-const CardDesktop = ({title, description, image}) => {
+const CardDesktop = ({title, description, image, link="", linkDescription=""}) => {
         return (
             
             <div className="card-container">
                 <div className='flex-container'>
-                    <img src={image} alt="asdf" className='card-image'></img>
-                    <h1 className='card-item'>{title}</h1>
+                    <img className='card-image' src={image} alt="asdf" ></img>
+                    <h1 className='card-image'>{title}</h1>
                 </div>
-                <p className='card-item'>{description}</p>
+                <p className='card-desc'>{description}</p>
             </div>
         );
     }
 
-    const CardMobile = ({title, description, image}) => {
+    const CardMobile = ({title, description, image, link="", linkDescription=""}) => {
         return (
             
             <div className="card-container">
                 <h1 className='card-title'>{title}</h1>
                 <img className='card-image' src={image} alt="asdf" ></img>
-                <p className='card-desc'>{description}</p>
+                <p className='card-desc'>{description} <a href={link}>{linkDescription}</a></p>
             </div>
         );
     }
