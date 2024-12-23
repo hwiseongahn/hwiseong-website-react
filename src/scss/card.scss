@@ -1,32 +1,77 @@
-.card-container {
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 2;
-    width: fit-content;
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px hsla(0, 0, 0, 0.1);
-
-    .flex-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
+@media only screen and (min-width: 650px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 2;
+        width: fit-content;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px hsla(0, 0, 0, 0.1);
     
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+        
+        }
+        .card-image {
+            width: 5vw;
+            height: auto;
+        }
+    
+        h1 {
+            margin: 0 1rem 0 0;
+            font-size: 1rem;
+            align-content: center;
+            text-align: left;
+            width: max-content;
+        }
+    
+        p {
+            margin-top: 1rem;
+        }
     }
-    .card-image {
-        width: 5vw;
-        height: auto;
-    }
+}
 
-    h1 {
-        margin: 0 1rem 0 0;
-        font-size: 1rem;
-        align-content: center;
-        text-align: left;
-        width: max-content;
-    }
+@media only screen and (max-width: 649px) {
+    .card-container {
+        display: grid;
+        grid-gap: 15px;
+        align-items: start;
+        grid-template-areas: 
+        "card-title card-image"
+        "card-description card-image";
+        width: 90vw;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px hsla(0, 0, 0, 0.1);
+    
+        .card-image {
+            width: auto;
+            height: 30vw;
+        }
 
-    p {
-        margin-top: 1rem;
+        .card-title {
+            height: 30vw;
+            width: auto;
+            font-size: clamp(1rem, 15vw, 7vw);
+            margin: 0 0 0 5px;
+        }
+
+        .card-desc {
+            margin: 0 0 5px 0;
+        }
+    
+        h1 {
+            margin: 0 1rem 0 0;
+            font-size: 1rem;
+            align-content: center;
+            text-align: left;
+            width: max-content;
+        }
+    
+        p {
+            margin-top: 1rem;
+        }
     }
 }
