@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import newYorkNight from "../assets/newyorkplease.png";
+import newYorkNight from "../assets/newyorkplease.jpg";
 import "../scss/hero.scss";
 function Hero() {
 
