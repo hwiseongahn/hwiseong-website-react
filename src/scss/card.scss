@@ -64,6 +64,7 @@
         .card-desc {
             margin: 0 0 5px 5px;
             grid-area: card-desc;
+            white-space: pre-wrap;
         }
     
         h1 {
