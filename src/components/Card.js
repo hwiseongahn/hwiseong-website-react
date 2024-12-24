@@ -57,7 +57,10 @@ const CardDesktop = ({title, description, image, link="", linkDescription=""}) =
             <div className="card-container">
                 <h1 className='card-title'>{title}</h1>
                 <img className='card-image' src={image} alt="asdf" ></img>
-                <p className="card-desc" dangerouslySetInnerHTML={{ __html: description }}></p>
+                <div className="card-desc">
+                    <p  dangerouslySetInnerHTML={{ __html: description }}></p>
+                    <p><a href={link}>{linkDescription}</a></p>
+                </div>
             </div>
         );
     }
