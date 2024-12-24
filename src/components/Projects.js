@@ -8,10 +8,10 @@ function Projects() {
   return (
     <div className="projects-container">
         <h1>Projects</h1>
-        <p className="projects-text">These are some projects I've created.</p>
+        <p className="projects-text">Here are some of the projects I’ve developed. You can find the source code for these projects on my GitHub. </p>
         <Card 
             title="summBot" 
-            description="This Discord bot summarizes conversations. Software used: Python, discord.py, and Gemini API for text analysis." 
+            description="This Discord bot summarizes conversations.<br/>Software used: Python, discord.py, and Gemini API for text analysis." 
             image={summBot} 
             link="https://discord.com/oauth2/authorize?client_id=1293394343297679390" 
             linkDescription='Link to invite discord bot'/>

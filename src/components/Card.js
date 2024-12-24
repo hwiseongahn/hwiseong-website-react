@@ -22,6 +22,8 @@ function Card({title, description, image, link="", linkDescription=""}) {
                             title={title} 
                             image={image} 
                             description={description}
+                            link={link}
+                            linkDescription={linkDescription}
                         />
                     ) : (
                         <CardMobile 
@@ -38,20 +40,21 @@ function Card({title, description, image, link="", linkDescription=""}) {
     return <ScreenWidthCheck />;
 }
 
-const CardDesktop = ({title, description, image, link="", linkDescription=""}) => {
+const CardDesktop = ({title, description, image, link, linkDescription}) => {
         return (
             
             <div className="card-container">
-                <div className='flex-container'>
-                    <img className='card-image' src={image} alt="asdf" ></img>
-                    <h1 className='card-image'>{title}</h1>
+                <img className='card-image' src={image} alt="asdf" ></img>
+                <h1 className='card-title'>{title}</h1>
+                <div className="card-desc">
+                    <p  dangerouslySetInnerHTML={{ __html: description }}></p>
+                    <p><a href={link}>{linkDescription}</a></p>
                 </div>
-                <p className="card-desc" dangerouslySetInnerHTML={{ __html: description }}></p>
             </div>
         );
     }
 
-    const CardMobile = ({title, description, image, link="", linkDescription=""}) => {
+    const CardMobile = ({title, description, image, link, linkDescription}) => {
         return (
             
             <div className="card-container">
