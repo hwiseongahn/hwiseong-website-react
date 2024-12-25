@@ -182,7 +182,7 @@ const NavbarDesktop = () => {
                     <CustomLink to="/Projects">PROJECTS</CustomLink>
                 </div>
                 <div className="navbar-right">
-                <CustomLink onClick={onSunClick}><SunIcon className="sun-icon"/></CustomLink>
+                    <SunIcon onClick={onSunClick} className="sun-icon"></SunIcon>
                     <CustomLink to="https://www.linkedin.com/in/hwiseongahn/">
                         <motion.p
                             className="linked-text"
