@@ -6,6 +6,13 @@
         gap: 1rem;
         align-items: center;
     }
+
+    .projects-card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 2vw;
+    }
 }
 
 @media only screen and (max-width: 649px) {
@@ -22,4 +29,9 @@
         text-align: center;
     }
 
+    .projects-card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }

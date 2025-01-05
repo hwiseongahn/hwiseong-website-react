@@ -67,21 +67,6 @@
         width: auto;
         height: 22px;
     }
-
-    .navbar-top,
-    .navbar-left, 
-    .logo, 
-    .hamburger-icon, 
-    .sun-icon, 
-    .navbar-right, 
-    body,
-    .icon, 
-    .link,
-    .active-link
-    {
-        animation: var(--fadeAnimation) 0.2s ease-in-out forwards;
-    }
-    
 }
 
 @media only screen and (max-width: 649px) {
@@ -168,20 +153,6 @@
             }
         }
     }
-
-    .navbar-top,
-    .navbar-left, 
-    .logo, 
-    .hamburger-icon, 
-    .sun-icon, 
-    .navbar-right, 
-    body,
-    .icon, 
-    .link,
-    .active-link
-    {
-        animation: var(--fadeAnimation) 0.2s ease-in-out forwards;
-    }
 }
 
 @keyframes slideDown {
@@ -225,6 +196,19 @@
     color: black;
     fill: black;
   }
+}
+
+.navbar-top,
+.navbar-left, 
+.logo, 
+.hamburger-icon, 
+.sun-icon, 
+body,
+.navbar-right, 
+.icon, 
+.link,
+.active-link {
+    animation: var(--fadeAnimation) 0.2s ease-in-out forwards;
 }
 
 

@@ -1,44 +1,54 @@
 a {
-    color: blue;
+    color: inherit;
 }
 
 
 
 @media only screen and (min-width: 650px) {
     .card-container {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-        width: fit-content;
+        display: grid;
+        grid-gap: 15px;
+        align-items: start;
+        grid-template-areas: 
+        "card-title card-image"
+        "card-desc card-desc";
+        width: 20vw;
         border: 1px solid lightgray;
         border-radius: 10px;
         box-shadow: 5px 5px 5px hsla(0, 0, 0, 0.1);
     
-        .flex-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: left;
-        
-        }
         .card-image {
-            width: 5vw;
-            height: auto;
+            width: min-content;
+            height: 10vw;
+            justify-self: right;
+            margin: 0 5px 0 0;
+        }
+
+        .card-title {
+            height: 10vw;
+            width: auto;
+            font-size: clamp(1rem, 1.5vw, 10vw);
+            line-height: 1;
+            margin: 0 0 0 5px;
         }
 
         .card-desc {
-            width: 15vw;
+            margin: 0 0 5px 5px;
+            grid-area: card-desc;
             white-space: pre-wrap;
-            text-align: left;
-            margin: 0 0 0 5px;
         }
     
         h1 {
-            margin: 0 15px 0 15px;
+            margin: 0 1rem 0 0;
             font-size: 1rem;
             align-content: center;
             text-align: left;
             width: max-content;
+        }
+
+        .link-icon {
+            width: 1vw;
+            height: auto;
         }
     }
 }
@@ -83,6 +93,11 @@ a {
             align-content: center;
             text-align: left;
             width: max-content;
+        }
+
+        .link-icon {
+            width: 3vw;
+            height: auto;
         }
     }
 }

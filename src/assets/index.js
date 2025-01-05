@@ -1,5 +1,6 @@
 export { ReactComponent as MoonIcon } from './moon.svg';
 export { ReactComponent as SunIcon } from './sun.svg';
+export {ReactComponent as LinkIcon} from './link.svg';
 export const aboutMe = "Hi I’m Hwiseong! Welcome to my website. " +
 "I’m in my second year of studying Computer Science at Dalhousie University. " + 
 "While I’m exploring different aspects of software development, I find front-end development to be the most enjoyable. " +

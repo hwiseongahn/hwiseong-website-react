@@ -1,0 +1,42 @@
+@keyframes slideDown {
+    0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(calc(100% + 4px));
+      }
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+}
+
+@keyframes fadeDark {
+    0% {
+        background-color: white;
+        color:black;
+        fill: black;
+      }
+      100% {
+        background-color: black;
+        color: white;
+        fill: white;
+      }
+}
+
+@keyframes fadeLight {
+    0% {
+    background-color: black;
+    color:white;
+    fill:white;
+  }
+  100% {
+    background-color: white;
+    color: black;
+    fill: black;
+  }
+}
