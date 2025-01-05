@@ -12,7 +12,7 @@
 @media only screen and (min-width: 650px) {
 
     nav {
-        font-family: Arial, helvetica-regular;
+        font-family: helvetica-regular;
         font-size: 1rem;
         margin: 0px;
         display: flex;
@@ -115,8 +115,8 @@
     }
 
     .navbar-mobile {
-        display: fixed;
-        position: relative;
+        position: fixed;
+        width: 100vw;
         flex-direction: column;
         justify-content: flex-end;
         font-size: 2rem;
