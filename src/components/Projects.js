@@ -31,7 +31,7 @@ function Projects() {
                 title="Algae and Carbon Dioxide Community Mapping" 
                 description="Community mapping of Canada and Alberta's Carbon Dioxide Emissions. <br/><br/>Software used: Python, Folium, Flask, HTML/CSS, JavaScript." 
                 image={Algae} 
-                link="https://algaeandco2.up.railway.app/" 
+                link="https://algaeandco2.vercel.app/" 
                 linkDescription='Deployed using Railway' 
                 linkEmoji={true}
             />
